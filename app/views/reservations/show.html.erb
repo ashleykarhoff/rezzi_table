@@ -2,5 +2,13 @@
 
 Party size: <%= @reservation.party_size %><br>
 Date: <%= @reservation.reservation_date %><br>
+<<<<<<< HEAD
+Time: <%= @reservation.reservation_time %><br>
+
+<%= link_to "Edit Reservation", edit_reservation_path(@reservation) %>
+<br>
+<%= link_to 'Delete', reservation_path(@reservation), method: :delete %>
+=======
 Time: <%= @reservation.reservation_time %>
 
+>>>>>>> master

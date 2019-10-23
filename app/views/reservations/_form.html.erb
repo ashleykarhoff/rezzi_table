@@ -1,0 +1,21 @@
+<%= form_with model: @reservation do |f| %>
+    <div class="form-group">
+        <%= f.label "Reservation Date" %>
+        <%= f.text_field :reservation_date %><br>
+    </div>
+
+    <div class="form-group">
+        <%= f.label "Reservation Time" %>
+        <%= f.text_field :reservation_time %><br>
+    </div>
+
+    <div class="form-group">
+        <%= f.label "Party Size" %>
+        <%= f.number_field :party_size %><br>
+    </div>
+    
+    <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    
+    <%= f.submit "Submit"%>
+<% end %>

@@ -9,9 +9,13 @@ class UsersController < ApplicationController
 
     # homepage page
     def show
+<<<<<<< HEAD
+    @user = User.find(session[:user])
+=======
     return head(:forbidden) unless session.include? :user_id
 
     @user = User.find(session[:user_id])
+>>>>>>> master
     @reservations = @user.reservations
     end
 
@@ -37,5 +41,9 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:name, :username, :password, :password_confirmation)
     end
+<<<<<<< HEAD
+end
+=======
 
 end
+>>>>>>> master

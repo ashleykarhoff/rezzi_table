@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<h1>Update your reservation at <%=@restaurant.name%> </h1>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |message| %>
+       <li> <%= message %> </li>
+    <% end %>
+<% end %>
+
+<%= render "form" %>
+=======
 <h1><%=@restaurant.name%></h1>
 
 <%= form_with model: @reservation do |f| %>
@@ -12,3 +23,4 @@
 
 <%= f.submit %>
 <% end %>
+>>>>>>> master
